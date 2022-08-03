@@ -13,6 +13,8 @@ import { LandingPageComponent } from './modulo-teste/landing-page/landing-page.c
 import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
 import { DataDrivenComponent } from './forms/data-driven/data-driven.component';
 import { FoodsComponent } from './servicos/foods/foods.component';
+import { CarroComponent } from './atividade/carro/carro.component';
+import { TestObservablesComponent } from './observables/test-observables/test-observables.component';
 const routes: Routes = [
     {
         path: '',
@@ -73,6 +75,14 @@ const routes: Routes = [
     {
         path: 'foods',
         component: FoodsComponent
+    },
+    {
+        path: 'carro',
+        component: CarroComponent
+    },
+    {
+        path: 'test-observables',
+        component: TestObservablesComponent
     }
 ];
 export const RoutingModule = RouterModule.forRoot(routes);

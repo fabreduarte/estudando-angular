@@ -1,0 +1,49 @@
+<div class="container p-3">
+    <div class="lista">
+        <h1>Lista de Carros</h1>
+        <ul class="list-group" *ngFor="let carro of carroLista">
+            <li class="list-group-item"><strong>ID: </strong>{{carro.id}}  -- <strong>Nome do Carro:</strong> {{carro.name}}, <strong>Tipo do Carro:</strong>
+                {{carro.type}}, <strong>Marca do
+                Carro: </strong>
+                {{carro.brand}}, <strong>Cor do Carro:</strong> {{carro.color}}, <strong>Fabricação do Carro:</strong> {{carro.fabricated}}
+            </li>
+        </ul>
+    </div>
+    <div class="pesquisa">
+        <h2>Pesquise aqui o Carro</h2>
+        <input type="text" class="form-control" #campoCarro>
+        <button class="btn btn-light mt-2" (click)="searchCarro(campoCarro.value)">Pesquisa</button>
+    </div>
+    <div class="novo">
+        <h2>Cadastre um novo Carro no nosso Banco de Dados</h2>
+        <form [formGroup]="form" (ngSubmit)="addCarro()">
+            <div class="mb-3" [ngClass]="erroCampo('name')">
+                <label for="name" class="form-label">Nome do Carro</label>
+                <input type="text" class="form-control" id="name" formControlName="name">
+                <small class="text-danger">Adicione o nome do carro.</small>
+            </div>
+            <div class="mb-3" [ngClass]="erroCampo('type')">
+                <label for="type" class="form-label">Tipo do Carro</label>
+                <input type="text" class="form-control" id="type" formControlName="type">
+                <small class="text-danger">Adicione o tipo do carro.</small>
+            </div>
+            <div class="mb-3" [ngClass]="erroCampo('brand')">
+                <label for="brand" class="form-label">Marca do Carro</label>
+                <input type="text" class="form-control" id="brand" formControlName="brand">
+                <small class="text-danger">Adicione a marca do carro.</small>
+            </div>
+            <div class="mb-3" [ngClass]="erroCampo('color')">
+                <label for="color" class="form-label">Cor do Carro</label>
+                <input type="text" class="form-control" id="color" formControlName="color">
+                <small class="text-danger">Adicione uma cor Válida.</small>
+            </div>
+            <div class="mb-3" [ngClass]="erroCampo('fabricated')">
+                <label for="fabricated" class="form-label">Data de Fabricação</label>
+                <input type="text" class="form-control" id="fabricated" formControlName="fabricated">
+                <small class="text-danger">Data Inválida.</small>
+            </div>
+        </form>
+        <button class="btn btn-success me-3" type="submit" (click)="addCarro()">Adicionar</button>
+        <button class="btn btn-dark" type="clear" (click)="clear()">Limpar</button>
+    </div>
+</div>

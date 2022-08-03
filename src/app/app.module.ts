@@ -15,6 +15,8 @@ import { ModuloTesteModule } from './modulo-teste/modulo-teste.module';
 import { FormsModule2 } from './forms/forms.module';
 import { ServicosModule } from './servicos/servicos.module';
 import { FoodService } from './servicos/food.service';
+import { CarroModule } from './atividade/carro/carro.module';
+import { ObservablesModule } from './observables/observables.module';
 
 @NgModule({
   declarations: [
@@ -33,8 +35,11 @@ import { FoodService } from './servicos/food.service';
     ComunicacaoDeComponentesModule,
     ModuloTesteModule,
     FormsModule2,
-    ServicosModule
+    ServicosModule,
+    CarroModule,
+    ObservablesModule
   ],
+
   providers: [
     //FoodService
   ],

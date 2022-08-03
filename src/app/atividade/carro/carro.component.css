@@ -1,0 +1,61 @@
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,h2,h3 {
+    color: rgba(49, 51, 49, 0.719);
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+strong {
+    color: rgba(51, 124, 51, 0.719);
+}
+
+input{
+    width: 40%;
+}
+
+li {
+    list-style: none;
+    font-size: large;
+}
+
+.lista {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.pesquisa {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.novo {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;    
+}
+
+small.text-danger {
+    display: none;
+}
+
+.error input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.error small.text-danger {
+    display: block;
+}
+
