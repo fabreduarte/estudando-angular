@@ -15,6 +15,7 @@ import { DataDrivenComponent } from './forms/data-driven/data-driven.component';
 import { FoodsComponent } from './servicos/foods/foods.component';
 import { CarroComponent } from './atividade/carro/carro.component';
 import { TestObservablesComponent } from './observables/test-observables/test-observables.component';
+import { FilmsComponent } from './http/films/films.component';
 const routes: Routes = [
     {
         path: '',
@@ -83,6 +84,10 @@ const routes: Routes = [
     {
         path: 'test-observables',
         component: TestObservablesComponent
+    },
+    {
+        path: 'films',
+        component: FilmsComponent
     }
 ];
 export const RoutingModule = RouterModule.forRoot(routes);

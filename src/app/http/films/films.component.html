@@ -1,0 +1,11 @@
+<h2>Filmes</h2>
+<ul>
+    <li *ngFor="let film of films">
+        {{ film.name }}
+        <ul>
+            <li>Item: {{ film.id }}</li>
+            <li>Categoria: {{ film.category }}</li>
+            <li>Ano: {{ film.year }}</li>
+        </ul>
+    </li>
+</ul>
