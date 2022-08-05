@@ -18,4 +18,16 @@ export class FilmService {
     return this.http.get<Film[]>("http://localhost:3000/films");
     
   }
+
+  public insert(film: Film): Observable<any> {
+    return this.http.post<any>("http://localhost:3000/films/", film);
+  }
+
+  public reload(film: Film): Observable<any> {
+    return this.http.put<any>(`http://localhost:3000/films/${film.id}`, film);
+  }
+
+  public delete(id: number): Observable<any> {
+    return this.http.delete(`http://localhost:3000/films/${id}`);
+  };
 }
